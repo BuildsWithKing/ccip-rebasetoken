@@ -187,13 +187,15 @@ contract RebaseTokenTest is Test {
         amount = bound(amount, MINIMUM_AMOUNT, type(uint96).max);
         vm.assume(randomUser != address(vault));
 
+        uint256 userInterestRate = rebaseToken.getUserInterestRate(randomUser);
+
         vm.expectRevert(
             abi.encodeWithSelector(
                 IAccessControl.AccessControlUnauthorizedAccount.selector, randomUser, rebaseToken.MINT_AND_BURN_ROLE()
             )
         );
         vm.prank(randomUser);
-        rebaseToken.mint(randomUser, amount, rebaseToken.getUserInterestRate(randomUser));
+        rebaseToken.mint(randomUser, amount, userInterestRate);
 
         vm.expectRevert(
             abi.encodeWithSelector(

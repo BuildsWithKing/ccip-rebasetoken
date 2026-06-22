@@ -5,13 +5,24 @@ zkout/
 
 # Ignores development broadcast logs
 !/broadcast
+/broadcast
+broadcast
 /broadcast/*/31337/
 /broadcast/**/dry-run/
 
 # Docs
 docs/
 
-# Dotenv file
+# Environment & secrets
 .env
-.foundry.toml
+foundry.toml
+foundry.lock
+
+# Package management
+node_modules/
+package-lock.json
+package.json
+
+# Auto-generated
+remappings.txt
 
