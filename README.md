@@ -60,7 +60,7 @@ Cross-chain functionality is enabled through [Chainlink CCIP](https://chain.link
 
 ```bash
 # Clone the repository
-git clone --recurse-submodules https://github.com/BuildsWithKing/ccip-rebase-token.git
+git clone --recurse-submodules https://github.com/BuildsWithKing/ccip-rebasetoken.git
 cd ccip-rebase-token
 
 # Install dependencies
