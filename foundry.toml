@@ -1,0 +1,19 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+via_ir = true
+
+rpc_endpoints= { sepolia-eth = "https://eth-sepolia.g.alchemy.com/v2/4RUGEyrY7r8Ch35VEVlLm", arb-sepolia = "https://arb-sepolia.g.alchemy.com/v2/4RUGEyrY7r8Ch35VEVlLm"}
+
+remappings = [
+    "@chainlink/contracts/=node_modules/@chainlink/contracts/",
+    "@openzeppelin/contracts@5.3.0/=lib/openzeppelin-contracts-5.3.0/contracts/",
+    "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+    "@openzeppelin/=lib/openzeppelin-contracts/",
+    "@forge-std=lib/forge-std",
+    "@ccip/contracts/=lib/chainlink-ccip/chains/evm/contracts/",
+    "@chainlink/local/=lib/chainlink-local/"
+]
+
+# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
